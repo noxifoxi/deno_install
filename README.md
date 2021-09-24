@@ -1,8 +1,8 @@
 # deno_install
 
-**One-line commands to install Deno on your system.**
+**One-line commands to install Deno on your ARM64 system.**
 
-[![Build Status](https://github.com/denoland/deno_install/workflows/ci/badge.svg?branch=master)](https://github.com/denoland/deno_install/actions)
+Builds are provided by [LukeChannings](https://github.com/LukeChannings) at [LukeChannings/deno-arm64](https://github.com/LukeChannings/deno-arm64/releases).
 
 ## Install Latest Version
 
@@ -59,7 +59,7 @@ asdf local deno 1.0.0
   **With Shell (`/usr/local`):**
 
   ```sh
-  curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh
+  curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sudo DENO_INSTALL=/usr/local sh
   ```
 
 ## Known Issues
@@ -69,7 +69,7 @@ asdf local deno 1.0.0
 The program [`unzip`](https://linux.die.net/man/1/unzip) is a requirement for the Shell installer.
 
 ```sh
-$ curl -fsSL https://deno.land/x/install/install.sh | sh
+$ curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sh
 Error: unzip is required to install Deno (see: https://github.com/denoland/deno_install#unzip-is-required).
 ```
 
