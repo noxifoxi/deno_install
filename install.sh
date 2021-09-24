@@ -9,20 +9,15 @@ if ! command -v unzip >/dev/null; then
 	exit 1
 fi
 
-if [ "$OS" = "Windows_NT" ]; then
-	target="x86_64-pc-windows-msvc"
-else
-	case $(uname -sm) in
-	"Darwin x86_64") target="x86_64-apple-darwin" ;;
-	"Darwin arm64") target="aarch64-apple-darwin" ;;
-	*) target="x86_64-unknown-linux-gnu" ;;
-	esac
+if [ "$(uname -sm)" != "Linux aarch64" ]; then
+	"Error: this script is for arm64 linux only (use: https://github.com/denoland/deno_install)." 1>&2
+	exit 1
 fi
 
 if [ $# -eq 0 ]; then
-	deno_uri="https://github.com/denoland/deno/releases/latest/download/deno-${target}.zip"
+	deno_uri="https://github.com/LukeChannings/deno-arm64/releases/latest/download/deno-linux-arm64.zip"
 else
-	deno_uri="https://github.com/denoland/deno/releases/download/${1}/deno-${target}.zip"
+	deno_uri="https://github.com/LukeChannings/deno-arm64/releases/download/${1}/deno-linux-arm64.zip"
 fi
 
 deno_install="${DENO_INSTALL:-$HOME/.deno}"

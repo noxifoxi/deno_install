@@ -9,13 +9,7 @@
 **With Shell:**
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh
-```
-
-**With PowerShell:**
-
-```powershell
-iwr https://deno.land/x/install/install.ps1 -useb | iex
+curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sh
 ```
 
 ## Install Specific Version
@@ -23,57 +17,7 @@ iwr https://deno.land/x/install/install.ps1 -useb | iex
 **With Shell:**
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh -s v1.0.0
-```
-
-**With PowerShell:**
-
-```powershell
-$v="1.0.0"; iwr https://deno.land/x/install/install.ps1 -useb | iex
-```
-
-## Install via Package Manager
-
-**With [Scoop](https://github.com/ScoopInstaller/Main/blob/master/bucket/deno.json):**
-
-```powershell
-scoop install deno
-```
-
-**With [Homebrew](https://formulae.brew.sh/formula/deno):**
-
-```sh
-brew install deno
-```
-
-**With [Macports](https://ports.macports.org/port/deno/summary):**
-
-```sh
-sudo port install deno
-```
-
-**With [Chocolatey](https://chocolatey.org/packages/deno):**
-
-```powershell
-choco install deno
-```
-
-**With [Snap](https://snapcraft.io/deno):**
-
-```sh
-sudo snap install deno
-```
-
-**With [Pacman](https://www.archlinux.org/pacman/):**
-
-```sh
-pacman -S deno
-```
-
-**Build and install from source using [Cargo](https://lib.rs/crates/deno):**
-
-```sh
-cargo install deno
+curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sh -s v1.6.3
 ```
 
 ## Install and Manage Multiple Versions
@@ -106,19 +50,6 @@ asdf global deno 1.0.0
 asdf local deno 1.0.0
 ```
 
-**With [Scoop](https://github.com/lukesampson/scoop/wiki/Switching-Ruby-And-Python-Versions):**
-
-```sh
-# Install a specific version of deno:
-scoop install deno@1.0.0
-
-# Switch to v1.0.0
-scoop reset deno@1.0.0
-
-# Switch to the latest version
-scoop reset deno
-```
-
 ## Environment Variables
 
 - `DENO_INSTALL` - The directory in which to install Deno. This defaults to
@@ -130,18 +61,6 @@ scoop reset deno
   ```sh
   curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh
   ```
-
-  **With PowerShell (`C:\Program Files\deno`):**
-
-  ```powershell
-  # Run as administrator:
-  $env:DENO_INSTALL = "C:\Program Files\deno"
-  iwr https://deno.land/x/install/install.ps1 -useb | iex
-  ```
-
-## Compatibility
-
-- The Shell installer can be used on Windows with [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about), [MSYS](https://www.msys2.org) or equivalent set of tools.
 
 ## Known Issues
 
