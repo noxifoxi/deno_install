@@ -1,15 +1,15 @@
-# deno_install
+# deno_install-arm64
 
 **One-line commands to install Deno on your ARM64 system.**
 
-Builds are provided by [LukeChannings](https://github.com/LukeChannings) at [LukeChannings/deno-arm64](https://github.com/LukeChannings/deno-arm64/releases).
+Because Deno does not have ARM64 binaries [yet](https://github.com/denoland/deno/issues/1846), LukeChannings put together a self-hosted GitHub Actions Runner at [LukeChannings/deno-arm64](https://github.com/LukeChannings/deno-arm64/releases), where the binaries are released to provide them for the community. I modified the official install script, in order to automate the install and upgrade *(just run the command again to upgrade)* process with [LukeChannings](https://github.com/LukeChannings)' builds.
 
 ## Install Latest Version
 
 **With Shell:**
 
 ```sh
-curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sh
+curl -fsSL https://noxifoxi.github.io/deno_install-arm64/install.sh | sh
 ```
 
 ## Install Specific Version
@@ -17,37 +17,17 @@ curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh 
 **With Shell:**
 
 ```sh
-curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sh -s v1.6.3
+curl -fsSL https://noxifoxi.github.io/deno_install-arm64/install.sh | sh -s v1.6.3
 ```
 
-## Install and Manage Multiple Versions
+## Install Multiple Versions
 
-**With [asdf](https://asdf-vm.com) and [asdf-deno](https://github.com/asdf-community/asdf-deno):**
+[`DENO_INSTALL`](#environment-variables) can be used to install a specific version into a different directory.
+
+**With Shell:**
 
 ```sh
-asdf plugin add deno
-
-# Get latest version of deno available
-DENO_LATEST=$(asdf latest deno)
-
-asdf install deno $DENO_LATEST
-
-# Activate globally with:
-asdf global deno $DENO_LATEST
-
-# Activate locally in the current folder with:
-asdf local deno $DENO_LATEST
-
-#======================================================
-# If you want to install specific version of deno then use that version instead
-# of DENO_LATEST variable example
-asdf install deno 1.0.0
-
-# Activate globally with:
-asdf global deno 1.0.0
-
-# Activate locally in the current folder with:
-asdf local deno 1.0.0
+curl -fsSL https://noxifoxi.github.io/deno_install-arm64/install.sh | DENO_INSTALL=$HOME/deno-1.6.3 sh -s v1.6.3
 ```
 
 ## Environment Variables
@@ -59,7 +39,7 @@ asdf local deno 1.0.0
   **With Shell (`/usr/local`):**
 
   ```sh
-  curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sudo DENO_INSTALL=/usr/local sh
+  curl -fsSL https://noxifoxi.github.io/deno_install-arm64/install.sh | sudo DENO_INSTALL=/usr/local sh
   ```
 
 ## Known Issues
@@ -69,7 +49,7 @@ asdf local deno 1.0.0
 The program [`unzip`](https://linux.die.net/man/1/unzip) is a requirement for the Shell installer.
 
 ```sh
-$ curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sh
+$ curl -fsSL https://noxifoxi.github.io/deno_install-arm64/install.sh | sh
 Error: unzip is required to install Deno (see: https://github.com/denoland/deno_install#unzip-is-required).
 ```
 
