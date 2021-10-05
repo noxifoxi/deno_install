@@ -9,7 +9,7 @@ Builds are provided by [LukeChannings](https://github.com/LukeChannings) at [Luk
 **With Shell:**
 
 ```sh
-curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sh
+curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sh
 ```
 
 ## Install Specific Version
@@ -17,7 +17,7 @@ curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/insta
 **With Shell:**
 
 ```sh
-curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sh -s v1.6.3
+curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sh -s v1.6.3
 ```
 
 ## Install and Manage Multiple Versions
@@ -59,7 +59,7 @@ asdf local deno 1.0.0
   **With Shell (`/usr/local`):**
 
   ```sh
-  curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sudo DENO_INSTALL=/usr/local sh
+  curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sudo DENO_INSTALL=/usr/local sh
   ```
 
 ## Known Issues
@@ -69,7 +69,7 @@ asdf local deno 1.0.0
 The program [`unzip`](https://linux.die.net/man/1/unzip) is a requirement for the Shell installer.
 
 ```sh
-$ curl -fsSL https://github.com/noxifoxi/deno_install_linux_arm64/raw/master/install.sh | sh
+$ curl -fsSL https://github.com/noxifoxi/deno_install-arm64/raw/master/install.sh | sh
 Error: unzip is required to install Deno (see: https://github.com/denoland/deno_install#unzip-is-required).
 ```
 
