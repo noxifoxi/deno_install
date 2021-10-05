@@ -2,7 +2,7 @@
 
 **One-line commands to install Deno on your ARM64 system.**
 
-Because Deno does not have ARM64 binaries [yet](https://github.com/denoland/deno/issues/1846), LukeChannings put together a self-hosted GitHub Actions Runner at [LukeChannings/deno-arm64](https://github.com/LukeChannings/deno-arm64/releases), where the binaries are released to provide them for the community. I modified the official install script, in order to automate the install and upgrade *(just run the command again to upgrade)* process with [LukeChannings](https://github.com/LukeChannings)' builds.
+Because Deno does not have ARM64 binaries [yet](https://github.com/denoland/deno/issues/1846), LukeChannings is building and providing them at [LukeChannings/deno-arm64](https://github.com/LukeChannings/deno-arm64/releases). I have modified the official install script to automate the installation and upgrade process with [LukeChannings](https://github.com/LukeChannings)' builds.
 
 ## Install Latest Version
 
@@ -43,6 +43,19 @@ curl -fsSL https://noxifoxi.github.io/deno_install-arm64/install.sh | DENO_INSTA
   ```
 
 ## Known Issues
+
+### The requested URL returned error: 404
+
+Specified versions that were not build at [LukeChannings/deno-arm64](https://github.com/LukeChannings/deno-arm64/releases) cannot be installed with the script.
+
+```sh
+$ curl -fsSL https://noxifoxi.github.io/deno_install-arm64/install.sh | sh -s v1.0.0
+curl: (22) The requested URL returned error: 404
+```
+
+**How can this issue be fixed?**
+
+Only try to install the versions available on the [releases page](https://github.com/LukeChannings/deno-arm64/releases). The oldest release available is Deno 1.6.3.
 
 ### unzip is required
 
